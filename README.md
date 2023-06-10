@@ -1,16 +1,3 @@
-# Fabric Example Mod
+## Itemless
 
-## Setup
-
-1. Edit gradle.properties, build.gradle and mod.json to suit your needs.
-    * The "mixins" object can be removed from mod.json if you do not need to use mixins.
-    * Please replace all occurences of "modid" with your own mod ID - sometimes, a different string may also suffice.
-2. Run the following command:
-
-```
-./gradlew
-```
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+What this mod does is allow you to see negative stack amounts rendered, which a helpful visualization for making 0 and negative stacks in 1.3.2. It works from versions 1.3.0 to 1.12.2, but between 1.8.0 and 1.12.0, all the mod does is render a "1" if an an itemstack has a stackside of 1 (this is because negative stacks are already rendered in that version range), which standalone would be one of the most useless mods ever created. In 1.12.1-1.12.2 it has to stop the render from skipping if the stacksize is <= 0, and adapts to using a getter instead of a field access, but otherwise it's the same thing for all versions. This was mainly targetted at 1.3-1.5 but basically I had a lot of time on my hands :P.
